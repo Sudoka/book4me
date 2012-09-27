@@ -15,7 +15,6 @@
 </tr>
 </table>
 </div>
-
 <div id="time">
 <table>
 <tr> <td id="time_entry">7:00</td></tr>
