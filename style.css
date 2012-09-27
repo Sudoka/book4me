@@ -6,9 +6,53 @@ body
 	margin:0 auto;
 	height:100%;
 	width:100%;
-	background:url("bg1.jpg") center top;
+	background:url("bg1.jpg") center top repeat;
 	/*background:url(bg1.jpg) #000 center top no-repeat;*/
 	overflow:hidden;
+}
+#day
+{
+	margin-left:150px;
+	width: 600px;
+	overflow: hidden;
+}
+#day_entry
+{
+	cursor:hand;
+	background: rgba(0,0,0,0.333);
+	border-radius:20px;
+	font-size:16px;
+	height:40px;
+	width: 40px;
+	overflow:hidden;
+/*	float:right;*/
+}
+#day_entry:hover
+{
+	cursor:hand;
+	color:yellowgreen;
+}
+#time
+{
+	width:120px;
+	overflow:hidden;
+	margin-right:10px;
+}
+#time_entry
+{
+	cursor:hand;
+	background: rgba(0,0,0,0.333);
+        border-radius:20px;
+	font-size:16px;
+	color: black;
+	width:50px;
+	overflow:hidden;
+	float:center;
+	
+}
+#time_entry:hover
+{
+	color:yellowgreen;
 }
 section#home
 {
@@ -28,7 +72,7 @@ section#contacts
 	 /*width:100%;*/
 	 height:100%;
 	 width:946px;
-	 margin-top:65px;
+	 margin-top:137px;
 	 margin-left:209px;
 	 margin-right:250px;
 	 padding:100px 0 0; 
@@ -40,7 +84,7 @@ section#about-us
 	 /*width:100%;*/
 	 height:100%;
 	 width:946px;
-	 margin-top:65px;
+	 margin-top:137px;
 	 margin-left:209px;
 	 margin-right:250px;
 	 padding:100px 0 0; 
@@ -87,7 +131,7 @@ p
 {
 	overflow:hidden;
 	width:100%; 
-	height:135px;
+	height:120px;
 	background:url("head-bg.png") left bottom repeat-x;
 	opacity:0.7;
 	position:fixed;
@@ -99,9 +143,9 @@ p
 	opacity:1;
 	color:white;
 	float:right;
-	margin-top:50px;
+	margin-top:30px;
 	margin-right:40px;
 	position:relative;
-	font-size:26px;
+	font-size:24px;
 	font-family: 'Nunito', sans-serif;
 }
