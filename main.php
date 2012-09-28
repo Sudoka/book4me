@@ -85,7 +85,7 @@
 		<h1> Login </h1>
 		<p> Here login form will come after completing back-end</p>
 		</section>
-		<section>
+		</section>
 	</body>
 </head>
 </html>
