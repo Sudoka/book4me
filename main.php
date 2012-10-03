@@ -1,4 +1,4 @@
-
+<?php session_start(); ?>
 <html>
 <head>
 	<title> Event Scheduler </title>
@@ -6,10 +6,14 @@
 	<link href='http://fonts.googleapis.com/css?family=Nunito:400,700' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Relex' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Lustria' rel='stylesheet' type='text/css'>
+	
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
 	<script type="text/javascript" src="ui.js"></script>
 	<script type="text/javascript" src="fav.js"></script>
+
 	<div id="header">
+		<div id="welcome"> <img src="https://graph.facebook.com/<?php echo $_SESSION['facebook']?>/picture"> <?php echo $_SESSION['name']; ?> <a href="logout.php"> [logout] </a>
+		</div>
 		
 		<div id="header-text">
 			<a class="anchorLink" href="#about-us"> About Us </a>
@@ -18,27 +22,67 @@
 			<a class="anchorLink" href="#contacts"> Contacts </a>
 		</div>
 		<div id="header-text">
-			<a class="anchorLink" href="#home"> Home </a>
+			<a class="anchorLink" href="#book"> Book </a>
 		</div>
 		<div id="header-text">
-                        <a class="anchorLink" href="#login"> Login </a>
-                </div>
+			<a class="anchorLink" href="#home"> Home </a>
+		</div>
 
 	</div>
 	</hr>
-	
+	</head>
+
+<?php
+if(!isset($_SESSION['id'])) header('Location: login.php');
+?>
+
 	<body>
-	
 		<section id="home">
 		<div id="homeText" class="scrollInfo">
 			<div id="htext">
-		<h1> Home </h1></div>
-		
+		<h1>Home </h1></div>
 		<div id="ptext">
 		<?php include("home_calendar.php"); ?>
 		</div>
 		</div>
 		</section>
+		
+		<section id="book">
+		<div id="bookText" class="scrollInfo">	
+		<div id="htext">
+		<h1> Book </h1></div>
+		<div id="ptext">
+		<p>
+		
+		<form name="book" action="book.php" method="GET">
+		<br>Name <input type="text" name="name">
+		<br>Keywords: <input type="text" name="keywords">
+		<br> Description <input type="text" name="description">
+		<br>Select Start time : 
+		<select name="start">
+		<script>
+			for(i=7;i<=23;i++) {
+				document.write('<option value="' + i + '">' + i + ':00</option>');
+				}
+		</script>
+		</select>
+		<br>Select Stop time : 
+		<select name="stop">
+		<script>
+			for(i=7;i<=23;i++) {
+				document.write('<option value="' + i + '">' + i + ':00</option>');
+				}
+		</script>
+		</select>
+		<br><input type="submit" value="submit">
+		
+		</form>
+		</p>
+		</div>
+		</div>
+		</div>
+		</section>
+		
 		<section id="contacts">
 		<div id="contactsText" class="scrollInfo">
 		<div id="htext">
@@ -59,6 +103,7 @@
 		</div>
 		</div>
 		</section>
+
 		<section id="about-us">
 		<div id="aboutText" class="scrollInfo">	
 		<div id="htext">
@@ -80,12 +125,7 @@
 		</div>
 		</div>
 		</section>
-		<section id="login">
-		<section id="about-us">
-		<h1> Login </h1>
-		<p> Here login form will come after completing back-end</p>
-		</section>
-		</section>
+		
 	</body>
 </head>
 </html>

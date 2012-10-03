@@ -74,3 +74,22 @@ return fold>=$(element).offset().left+settings.threshold+$(element).width();};$.
 		})
 	}
 	
+	function show_login() {
+		$("#header").hide();
+		$("section#home").hide();
+		$("section#contacts").hide();
+		$("section#about-us").hide();
+		$("section#login").show();
+		window.location = "main.php#login";
+		return true;
+		}
+		
+	function hide_login() {
+		alert("here");
+		$("#header").show();
+		$("section#home").show();
+		$("section#contacts").show();
+		$("section#about-us").show();
+		$("section#login").hide();
+		return true;
+		}
