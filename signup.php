@@ -15,7 +15,7 @@ if($q->execute(array(':id'=>$_SESSION['newid'],
 					':name'=>$_GET['name'],
 					':facebook'=>$_GET['facebook'],
 					':secret'=>$secret))){
-					echo $_SESSION['newid'] . $secret . $_SESSION['newpassword'];
+					//echo $_SESSION['newid'] . $secret . $_SESSION['newpassword'];
 					
 					require_once "../../../../php/PEAR/Mail.php";
  

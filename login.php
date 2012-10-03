@@ -1,3 +1,4 @@
+<html>
 <head>
 	<title> Event Scheduler </title>
 	<link rel="stylesheet" type="text/css" href="style.css">
@@ -21,6 +22,7 @@
 		Username: <input type="text" name="id">@iitk.ac.in<br>
 		Password: <input type="password" name="password"><br>
 		<input type="submit" value="Submit"></form>
+		<a href="forgot.php">Forgot Password?</a>&nbsp;&nbsp;&nbsp;Enter new password.
 		</div>
 		</div>
 		</div>
