@@ -58,18 +58,44 @@ if(!isset($_SESSION['id'])) header('Location: login.php');
 		<br>Name <input type="text" name="name">
 		<br>Keywords: <input type="text" name="keywords">
 		<br> Description <input type="text" name="description">
+		<br> Room <select name="room">
+		<option value="1"> Room 1</option>
+		<option value="2"> Room 2</option>
+		<option value="3"> Room 3</option>
+		</select>
+		<br>Date : 
+		<select name="date">
+		<script>
+			for(i=1;i<=31;i++) {
+				document.write('<option value="' + i + '">' + i + '</option>');
+				}
+		</script>
+		</select>&nbsp;&nbsp;
+		<select name="month">
+		<script>
+			for(i=1;i<=12;i++) {
+				document.write('<option value="' + i + '">' + i + '</option>');
+				}
+		</script>
+		</select>
 		<br>Select Start time : 
 		<select name="start">
 		<script>
-			for(i=7;i<=23;i++) {
+			for(i=0;i<=9;i++) {
+				document.write('<option value="' + i + '">' + '0' + i + ':00</option>');
+				}
+			for(i=10;i<=23;i++) {
 				document.write('<option value="' + i + '">' + i + ':00</option>');
 				}
 		</script>
 		</select>
-		<br>Select Stop time : 
-		<select name="stop">
+		<br>Select End time : 
+		<select name="end">
 		<script>
-			for(i=7;i<=23;i++) {
+			for(i=0;i<=9;i++) {
+				document.write('<option value="' + i + '">' + '0' + i + ':00</option>');
+				}
+			for(i=10;i<=23;i++) {
 				document.write('<option value="' + i + '">' + i + ':00</option>');
 				}
 		</script>

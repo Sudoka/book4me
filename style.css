@@ -16,7 +16,7 @@ body
 }
 #day
 {
-	margin-left:150px;
+	margin-left:250px;
 	width: 600px;
 	overflow: hidden;
 }
@@ -28,7 +28,7 @@ body
 	font-size:16px;
 	height:40px;
 	width: 40px;
-	overflow:hidden;
+	overflow:auto;
 /*	float:right;*/
 }
 #day_entry:hover
@@ -36,11 +36,25 @@ body
 	cursor:hand;
 	color:yellowgreen;
 }
+#time_event
+{
+	width:700px;
+	position:absolute;
+}	
 #time
 {
 	width:120px;
 	overflow:hidden;
 	margin-right:10px;
+	position: absolute;
+}
+#event
+{
+	width: 650px;
+	height: 300px;
+	margin-left: 200px;
+	position: absolute;
+	overflow: auto;
 }
 #time_entry
 {
@@ -49,7 +63,7 @@ body
         border-radius:20px;
 	font-size:16px;
 	color: black;
-	width:50px;
+	width:100px;
 	overflow:hidden;
 	float:left;
 	
@@ -126,10 +140,26 @@ section#login
 {
 	width: 300px;
 	background: rgba(0,0,0,0.333);
-    text-shadow: -1px -1px 2px rgba(100,100,100,0.9);
+    //text-shadow: -1px -1px 2px rgba(100,100,100,0.9);
 	border-radius: 2em;
 	color: #983e0c;
 	padding: 0px 50px 0;
+}
+#h3text
+{
+	width: 300px;
+	background: rgba(0,0,0,0.333);
+    //text-shadow: -1px -1px 2px rgba(100,100,100,0.9);
+	border-radius: 2em;
+	color: #white;
+}
+#h4text
+{
+	width: 40px;
+	background: rgba(0,0,0,0.333);
+    //text-shadow: -1px -1px 2px rgba(100,100,100,0.9);
+	border-radius: 2em;
+	color: #white;
 }
 
 /* LAYOUT */
@@ -150,10 +180,35 @@ h1
 	font-size:40px;
 	font-family: 'Relex', cursive;
 }
+h3
+{
+	border-radius: 20px;
+	color: yellowgreen;
+	font-size:20px;
+}
+h4
+{
+	border-radius: 20px;
+	color: yellowgreen;
+	font-size:18px;
+}
 p
 {
 	font-family: 'Lustria', cursive;
-	color: rgb(250,200,200);
+	color: white;
+}
+p2
+{
+	font-family: 'Lustria', cursive;
+	color: green;
+	opacity: 0.8;
+	font-size: 16px;	
+}
+p3
+{
+	font-family: 'Lustria', cursive;
+	color: white;
+	font-size: 14px;	
 }
 #header 
 {

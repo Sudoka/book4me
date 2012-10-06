@@ -74,7 +74,7 @@ return fold>=$(element).offset().left+settings.threshold+$(element).width();};$.
 		})
 	}
 	
-	function show_login() {
+	/*function show_login() {
 		$("#header").hide();
 		$("section#home").hide();
 		$("section#contacts").hide();
@@ -92,4 +92,4 @@ return fold>=$(element).offset().left+settings.threshold+$(element).width();};$.
 		$("section#about-us").show();
 		$("section#login").hide();
 		return true;
-		}
+		}*/
